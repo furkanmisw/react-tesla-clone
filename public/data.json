@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "title": "Model 3",
+    "body": "Order Online for ",
+    "link": "Touchless Delivery",
+    "btn1": "CUSTOM ORDER",
+    "btn2": "EXISTING INVENTORY"
+  },
+  {
+    "id": 2,
+    "title": "Model Y",
+    "body": "Order Online for ",
+    "link": "Touchless Delivery",
+    "btn1": "CUSTOM ORDER",
+    "btn2": "EXISTING INVENTORY"
+  },
+  {
+    "id": 3,
+    "title": "Model S",
+    "body": "Order Online for ",
+    "link": "Touchless Delivery",
+    "btn1": "CUSTOM ORDER",
+    "btn2": "EXISTING INVENTORY"
+  },
+  {
+    "id": 4,
+    "title": "Model X",
+    "body": "Order Online for ",
+    "link": "Touchless Delivery",
+    "btn1": "CUSTOM ORDER",
+    "btn2": "EXISTING INVENTORY"
+  },
+  {
+    "id": 5,
+    "title": "Solar Panels",
+    "body": "Lowest Cost Solar Panels in America",
+    "btn1": "ORDER NOW",
+    "btn2": "LEARN MORE"
+  },
+  {
+    "id": 6,
+    "title": "Solar Roof",
+    "body": "Produce Clean Energy From Your Roof",
+    "btn1": "ORDER NOW",
+    "btn2": "LEARN MORE"
+  },
+  { "id": 7, "title": "Accessories", "btn1": "SHOP NOW" }
+]

@@ -1,13 +1,83 @@
-body {
+@font-face {
+  font-family: "Gotham SSm";
+  src: url("../public/GothamSSm-Book_Web.woff2") format("woff2"),
+    url("../public/GothamSSm-Medium_Web.woff2") format("woff2");
+}
+:root {
+  --primary-color: #171a20;
+  --custom1-color: #393c41;
+  --btn1-color: #393c41;
+  --btn2-color: #f4f4f4a6;
+}
+* {
+  text-decoration: none;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.impact {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 52px;
+}
+.impact a {
+  color: var(--custom1-color);
+  font-size: 14px;
+  border-bottom: 1px solid var(--custom1-color);
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+.header .left {
+  padding-left: 32px;
+  flex: 1.5 1 auto;
+}
+.mainlogo {
+  cursor: pointer;
+  width: 120px;
+  height: 24px;
+}
+.header .mid {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+.header .item {
+  cursor: pointer;
+  transition: 600ms ease;
+  font-size: 14px;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  color: var(--primary-color);
+}
+.header .right {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: end;
+  padding-right: 32px;
+}
+.header .item:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+}
+.content {
+  padding-top: 200px;
+  width: 100vw;
+  height: 100vh;
 }
