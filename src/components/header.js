@@ -16,15 +16,15 @@ const Header = () => {
         <img src="teslalogo.svg" alt="mainlogo" className="mainlogo" />
       </div>
       <div className="mid">
-        {midButtonTexts.map((item) => (
-          <a href="/">
+        {midButtonTexts.map((item, index) => (
+          <a key={`mid${index}`} href="/">
             <span className="item">{item}</span>
           </a>
         ))}
       </div>
       <div className="right">
-        {rightButtonTexts.map((item) => (
-          <a href="/">
+        {rightButtonTexts.map((item,index) => (
+          <a key={`right${index}`} href="/">
             <span className="item">{item}</span>
           </a>
         ))}

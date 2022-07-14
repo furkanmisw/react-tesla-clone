@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Impact />
-      <Header />
+      <Header/>
       <Content />
     </>
   );

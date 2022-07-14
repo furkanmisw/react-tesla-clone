@@ -9,14 +9,16 @@ const Content = (props) => {
   });
   return (
     <div className="content">
-      <div
-        style={{
-          backgroundImage: "url(../images/1.jpg)",
-          height: "550px",
-          width: "550px",
-        }}
-      ></div>
-      <img src="../images/1.jpg" alt="" />
+      {data.map((data, index) => (
+        <div
+          className={"content-item"}
+          style={{
+            backgroundImage: `url(images/${data.id}.png)`,
+            width: "100vw",
+            height: "100vh",
+          }}
+        ></div>
+      ))}
     </div>
   );
 };
