@@ -23,7 +23,7 @@ const Header = () => {
         ))}
       </div>
       <div className="right">
-        {rightButtonTexts.map((item,index) => (
+        {rightButtonTexts.map((item, index) => (
           <a key={`right${index}`} href="/">
             <span className="item">{item}</span>
           </a>
