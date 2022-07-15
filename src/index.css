@@ -9,6 +9,7 @@
   --custom1-color: #393c41;
   --btn1-color: #393c41;
   --btn2-color: #f4f4f4a6;
+  --padding-custom1: 10vh;
 }
 
 * {
@@ -107,7 +108,7 @@
   height: 100vh;
 }
 .display-data {
-  top: calc(52px + 56px + 4rem);
+  top: calc(52px + 56px + 4.5vh );
   position: fixed;
   display: flex;
   left: 50%;
@@ -125,6 +126,7 @@
 .line {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .line a {
   font-weight: 400;

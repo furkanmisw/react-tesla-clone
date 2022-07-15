@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, useEffect, useState } from "react";
 
 const Content = (props) => {
   const [data, setData] = useState([]);
   const [number, setNumber] = useState(1);
-  const [view, setView] = useState({
-    id: 1,
-    title: "",
-    body: "",
-    link: "",
-    btn1: "",
-    btn2: "",
-  });
+  const [view, setView] = useState(null);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -18,7 +11,7 @@ const Content = (props) => {
         setData(res);
         setView(res[0]);
       });
-  });
+  },[]);
   const calc = (number) => {
     if (number < 0.5) {
       setNumber(1 - number * 2);
@@ -35,6 +28,8 @@ const Content = (props) => {
           const current = event.currentTarget.scrollTop;
           const pageH = event.currentTarget.offsetHeight;
           calc((current / pageH) % 1);
+          const pageIndex = current / pageH;
+          setView(data[Math.round(pageIndex)])
         }}
       >
         {data.map((data, index) => (
@@ -59,18 +54,18 @@ const Content = (props) => {
               marginBottom: "10px",
             }}
           >
-            {view.title}
+            {view?.title ?? 'title'}
           </h1>
           <div className="line">
-            <pre>{`${view.body} `}</pre>
+            <pre>{`${view?.body ?? 'body'} `}</pre>
             <a
               style={{
                 borderBottom: "1px solid rgba(0,0,0,.2)",
-                display: view.link ?? "none",
+                
               }}
               href="/a"
             >
-              {view.link}
+              {view?.link ?? 'link'}
             </a>
           </div>
         </div>
