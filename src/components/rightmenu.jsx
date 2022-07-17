@@ -1,7 +1,6 @@
 import React from "react";
 import OutsideClickHandler from "react-outside-click-handler";
-const RightMenu = ({setMenu,menu}) => {
-
+const RightMenu = ({ setMenu, menu }) => {
   const contents = [
     "Existing Inventory",
     "Used Inventory",
@@ -21,12 +20,7 @@ const RightMenu = ({setMenu,menu}) => {
   ];
   return (
     <OutsideClickHandler onOutsideClick={() => setMenu(false)}>
-      <div
-        className="rightmenu"
-        style={{
-          display: menu ? "block" : "none",
-        }}
-      >
+      <div className={`rightmenu ${menu ? "active" : "close"}`}>
         <div className="menu-header">
           <img
             src="closeicon.svg"
@@ -42,6 +36,7 @@ const RightMenu = ({setMenu,menu}) => {
         </div>
         <div className="menu-content">
           <ol
+            className="right-menu-items"
             style={{
               listStyle: "none",
             }}
@@ -52,6 +47,13 @@ const RightMenu = ({setMenu,menu}) => {
               </li>
             ))}
           </ol>
+          <div className="container">
+            <img src="global.svg" alt="global" className="global-icon" />
+            <div className="text">
+              <h1>United States</h1>
+              <h2>English</h2>
+            </div>
+          </div>
         </div>
       </div>
     </OutsideClickHandler>

@@ -11,7 +11,7 @@ const App = () => {
     <>
       <Impact />
       <Header setMenu={setMenu} />
-      <Content />
+      <Content menu={menu} setMenu={setMenu} />
       <RightMenu setMenu={setMenu} menu={menu} />
     </>
   );

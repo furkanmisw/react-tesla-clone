@@ -1,7 +1,8 @@
 import React, { lazy, useEffect, useState } from "react";
 import Button from "./button";
+import Footer from "./footer";
 
-const Content = (props) => {
+const Content = ({ menu, setMenu }) => {
   const [data, setData] = useState([]);
   const [number, setNumber] = useState(1);
   const [view, setView] = useState({
@@ -101,6 +102,11 @@ const Content = (props) => {
       >
         <img src="downarrow.svg" alt="downarrow" />
       </div>
+      <Footer active={view === data[data.length - 1]} />
+      <div
+        onClick={() => setMenu(false)}
+        className={`backdrop ${menu ? "open" : "close"}`}
+      ></div>
     </>
   );
 };
