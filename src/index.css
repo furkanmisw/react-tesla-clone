@@ -7,9 +7,6 @@
 :root {
   --primary-color: #171a20;
   --custom1-color: #393c41;
-  --btn1-color: #393c41;
-  --btn2-color: #f4f4f4a6;
-  --padding-custom1: 10vh;
 }
 
 * {
@@ -108,7 +105,7 @@
   height: 100vh;
 }
 .display-data {
-  top: calc(52px + 56px + 4.5vh );
+  top: calc(52px + 56px + 6vh);
   position: fixed;
   display: flex;
   left: 50%;
@@ -133,4 +130,94 @@
   color: var(--custom1-color);
   font-size: 14px;
   border-bottom: 1px solid var(--custom1-color);
+}
+.buttons {
+  position: fixed;
+  bottom: 7rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.button1 {
+  background-color: #171a20cc;
+}
+.button1 > a {
+  color: white;
+}
+.button2 {
+  background-color: #f4f4f4a6;
+}
+.button2 > a {
+  color: var(--custom1-color);
+}
+
+.button > a {
+  font-weight: 500;
+  font-size: 12px;
+}
+.button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 264px;
+  border-radius: 40px;
+  padding: 7px 24px;
+  cursor: pointer;
+}
+
+/**/
+
+.rightmenu {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  background-color: white;
+}
+.menu-header {
+  margin: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.menu-content {
+  width: 230px;
+  margin: 32px;
+}
+.menu-content ol li a {
+  color: var(--custom1-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu-content .item:hover {
+  background-color: red;
+}
+.arrow {
+  animation: 1s ease-in;
+  position: fixed;
+  bottom: 15px;
+  left: calc(50% - 12.5px);
+  width: 25px;
+  height: 35px;
+}
+.arrow img {
+  animation: arr 1.2s ease infinite;
+
+  position: absolute;
+}
+@keyframes arr {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }

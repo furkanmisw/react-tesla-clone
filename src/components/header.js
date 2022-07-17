@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ setMenu }) => {
   const midButtonTexts = [
     "Model S",
     "Model 3",
@@ -24,7 +24,15 @@ const Header = () => {
       </div>
       <div className="right">
         {rightButtonTexts.map((item, index) => (
-          <a key={`right${index}`} href="/">
+          // eslint-disable-next-line jsx-a11y/anchor-is-valid
+          <a
+            key={`right${index}`}
+            onClick={() => {
+              if (item === "Menu") {
+                setMenu(true);
+              }
+            }}
+          >
             <span className="item">{item}</span>
           </a>
         ))}
