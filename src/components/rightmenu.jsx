@@ -43,7 +43,7 @@ const RightMenu = ({ setMenu, menu }) => {
           >
             {contents.map((item, index) => (
               <li className="item">
-                <a href="/">{item}</a>
+                <a href="#">{item}</a>
               </li>
             ))}
           </ol>

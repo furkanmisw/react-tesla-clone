@@ -17,7 +17,7 @@ const Header = ({ setMenu }) => {
       </div>
       <div className="mid">
         {midButtonTexts.map((item, index) => (
-          <a key={`mid${index}`} href="/">
+          <a key={`mid${index}`} href="#">
             <span className="item">{item}</span>
           </a>
         ))}

@@ -70,7 +70,7 @@ const Content = ({ menu, setMenu }) => {
                 style={{
                   borderBottom: "1px solid rgba(0,0,0,.2)",
                 }}
-                href="/a"
+                href="#"
               >
                 {view?.link ?? "link"}
               </a>
